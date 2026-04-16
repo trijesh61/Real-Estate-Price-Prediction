@@ -119,13 +119,27 @@ div[data-testid="stNumberInput"] > div > div:focus-within {
 
 
 # ── Load artifacts ────────────────────────────────────────────────────────────
-@st.cache_resource
+"""@st.cache_resource
 def load_model():
     return joblib.load("banglore_home_prices_model.joblib")
 
 @st.cache_data
 def load_columns():
     with open("columns.json") as f:
+        data = json.load(f)
+    return data["data_columns"]"""
+import os
+
+# ── Load artifacts ─────────────────────────────────────────────────────────
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+@st.cache_resource
+def load_model():
+    return joblib.load(os.path.join(BASE_DIR, "banglore_home_prices_model.joblib"))
+
+@st.cache_data
+def load_columns():
+    with open(os.path.join(BASE_DIR, "columns.json")) as f:
         data = json.load(f)
     return data["data_columns"]
 
