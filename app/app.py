@@ -118,16 +118,6 @@ div[data-testid="stNumberInput"] > div > div:focus-within {
 """, unsafe_allow_html=True)
 
 
-# ── Load artifacts ────────────────────────────────────────────────────────────
-"""@st.cache_resource
-def load_model():
-    return joblib.load("banglore_home_prices_model.joblib")
-
-@st.cache_data
-def load_columns():
-    with open("columns.json") as f:
-        data = json.load(f)
-    return data["data_columns"]"""
 import os
 
 # ── Load artifacts ─────────────────────────────────────────────────────────
