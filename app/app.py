@@ -5,7 +5,7 @@ import numpy as np
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Bangalore Home Price Predictor",
+    page_title="Bengaluru Home Price Predictor",
     page_icon="🏠",
     layout="centered"
 )
@@ -153,7 +153,7 @@ def predict_price(location: str, sqft: float, bath: int, bhk: int) -> float:
 
 
 # ── UI ────────────────────────────────────────────────────────────────────────
-st.markdown("<h1>Bangalore Home<br>Price Predictor</h1>", unsafe_allow_html=True)
+st.markdown("<h1>Bengaluru Home<br>Price Predictor</h1>", unsafe_allow_html=True)
 st.markdown('<p class="subtitle">Estimate property value in seconds</p>', unsafe_allow_html=True)
 
 col1, col2 = st.columns(2)
